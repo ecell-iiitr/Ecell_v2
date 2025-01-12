@@ -1,8 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Poppins } from "next/font/google";
 import "./globals.css";
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue", // Custom variable for the font
+  subsets: ["latin"], // Specify the subsets you need
+  weight: ["400"], // Add the font weight(s) required
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
 
@@ -20,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} ${bebasNeue.variable}  antialiased`}
       >
         {children}
       </body>
