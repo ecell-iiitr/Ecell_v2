@@ -7,11 +7,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        bebas: "var(--font-bebas-neue)", // Make sure this variable is set elsewhere
+        poppins: ["Poppins", "sans-serif"], // Ensure Poppins is loaded via Google Fonts or locally
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
