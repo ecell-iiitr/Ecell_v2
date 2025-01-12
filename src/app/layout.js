@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Bebas_Neue, Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue", // Custom variable for the font
@@ -33,7 +35,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} ${bebasNeue.variable}  antialiased`}
       >
+        <div className="absolute top-0 left-0 w-full ">
+          <Navbar/>
+        </div>
         {children}
+        <Footer/>
       </body>
     </html>
   );
