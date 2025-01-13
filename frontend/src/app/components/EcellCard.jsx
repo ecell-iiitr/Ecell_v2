@@ -2,7 +2,7 @@ import React from "react";
 
 function EcellCard() {
   return (
-    <div className=" pt-20 px-10 h-screen md:pt-28 lg:pt-32 lg:px-32">
+    <div className=" pt-20 px-10  md:pt-28 lg:pt-32 lg:px-32">
       <h1 className="text-[#BD9F67] text-3xl font-bold  text-center">
         What is E-Cell?
       </h1>

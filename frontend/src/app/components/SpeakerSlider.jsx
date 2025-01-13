@@ -41,8 +41,9 @@ const RESPONSIVE_BREAKPOINTS = {
 
 function Speaker({ speaker }) {
   return (
-    <div
-      className=" w-[210px] sm:w-[200px] bg-[#243137] h-[270px] rounded-md p-10 flex-col items-center justify-center gap-3"
+    <div className="w-[210px] sm:w-[200px] ">
+      <div
+      className=" w-[205px] sm:w-[195px] bg-[#243137] h-[270px] rounded-md p-10 flex-col items-center justify-center gap-3"
     >
       <img
         src={speaker.image}
@@ -52,12 +53,14 @@ function Speaker({ speaker }) {
       <h3 className="text-lg text-[#BD9F67] font-semibold text-center">{speaker.name}</h3>
       <p className="text-md text-center text-white">{speaker.title}</p>
     </div>
+    </div>
+
   );
 }
 
 function SpeakerCarousel() {
   return (
-    <div className="h-[80%] px-10 py-16 md:p-16 lg:p-20">
+    <div className=" px-10 py-16 md:p-16 lg:p-20">
       <div className="text-[#BD9F67] font-bold text-3xl text-center mb-24">
         Inspirational Speakers
       </div>

@@ -40,7 +40,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="h-[80%] py-10 px-10 flex-col items-center justify-center">
+    <div className="py-10 px-10 flex-col items-center justify-center">
       <h2 className="text-center text-3xl font-bold text-[#BD9F67] mb-16">
         TESTIMONIAL
       </h2>

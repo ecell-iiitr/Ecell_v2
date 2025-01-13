@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
    
   return (
-    <nav className=" md:px-4 md:py-2 max-h-16 shadow-md sm:max-h-24 bg-black/80">
+    <nav className=" md:px-4 md:py-2 max-h-16 shadow-md sm:max-h-24 bg-[#1f2d33]">
       <div className="container flex justify-between items-center mx-auto px-10 ">
         <div className="text-xl font-bold">
           <Image src="/logo.png" width={35} height={35} alt="Logo" />
