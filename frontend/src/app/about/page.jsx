@@ -49,12 +49,35 @@ function page() {
           HIGHLIGHTS
         </h1>
         <div className="flex flex-wrap  items-center gap-7  justify-center px-5 md:px-10 py-8 w-full">
-            <HighlightsFlipCard/>
-            <HighlightsFlipCard/>
-            <HighlightsFlipCard/>
-            <HighlightsFlipCard/>
-            <HighlightsFlipCard/>
-            <HighlightsFlipCard/>
+          <HighlightsFlipCard />
+          <HighlightsFlipCard />
+          <HighlightsFlipCard />
+          <HighlightsFlipCard />
+          <HighlightsFlipCard />
+          <HighlightsFlipCard />
+        </div>
+      </section>
+      <section className="w-full pt-10 px-2">
+        <h1 className="text-center text-4xl font-bold text-[#BD9F67] pt-7 mb-10">
+          TIMELINE
+        </h1>
+        <div className="h-full flex items-center justify-center mb-10 w-full">
+            <div className="flex mx-auto">
+            <div className="mb-36  mt-auto ">
+            <div className=" h-20 w-20 rounded-full bg-[#243137]"></div>
+            <div className="h-6 mt-6  rounded-full w-[300px] bg-[#BD9F67] flex items-center justify-center text-white">
+              2016
+            </div>
+            <div className=" mt-6  rounded-xl w-[300px] border-2 border-[#BD9F67] p-4">
+              <h1 className="text-[#BD9F67]">2016</h1>
+              <p className="text-black font-light text-sm mt-2">Business incubator SINE inaugurated by Mr. Nandan Nilekani, CEO, Infosys and Mr. Kanwal Rekhi, Venture Capitalist and Director, TiE, jump starts with 8 startups incubated already.</p>
+            </div>
+          </div>
+          <div className="h-5 w-[20px] md:w-[300px] rounded-full bg-[#BD9F67] mt-[50px] relative right-[50px]"></div>
+          <div className="h-5  w-[20px] md:w-[300px] rounded-full bg-[#BD9F67] mt-[10px] relative right-[50px]  "></div>
+            </div>
+
+
         </div>
       </section>
     </div>

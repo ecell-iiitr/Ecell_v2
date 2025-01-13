@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} ${bebasNeue.variable}  antialiased`}
       >
-        <div className="absolute top-0 left-0 w-full z-30">
+        <div className="absolute top-0 left-0 w-full z-30 bg-[#212a2e4c]">
           <Navbar/>
         </div>
         {children}
