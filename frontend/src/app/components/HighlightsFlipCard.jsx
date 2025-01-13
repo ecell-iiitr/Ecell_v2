@@ -23,6 +23,7 @@ const HighlightsFlipCard = () => {
           <Image
             src={college}
             className="h-[200px] w-[300px] object-cover"
+            alt="college-1"
             width={300}
             height={200}
           />
@@ -46,6 +47,7 @@ const HighlightsFlipCard = () => {
             <Image
               src={college}
               className="h-[200px] w-[300px] object-cover"
+              alt="college-2"
               width={300}
               height={200}
             />
