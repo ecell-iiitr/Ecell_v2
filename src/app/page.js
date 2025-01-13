@@ -4,11 +4,13 @@ import TeamMemberCard from "./components/TeamMemberCard";
 import InspirationalSpeakerCard from "./components/InspirationalSpeakerCard";
 import HighlightsFlipCard from "./components/HighlightsFlipCard";
 import GalleryMassonary from "./components/GalleryMassonary";
-
+import Navbar from "./components/NavBar";
 export default function Home() {
   return (
-    <div className="w-screen h-screen flex items-center justify-center">
-      <GalleryMassonary />
+    <div className="h-screen">
+
     </div>
+
+
   );
 }
