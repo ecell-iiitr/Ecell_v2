@@ -17,6 +17,7 @@
     "react-multi-carousel": "^2.8.5",
     "react-responsive-masonry": "^2.6.0",
     "react-vertical-timeline-component": "^3.5.3",
+    "sharp": "^0.33.5",
     "swiper": "^11.2.1"
   },
   "devDependencies": {
