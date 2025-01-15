@@ -6,7 +6,7 @@ import { IoLocation } from "react-icons/io5";
 function Footer() {
   return (
     <footer className="bg-[#243137] w-full">
-      <div className="bg-transparent w-full md:flex justify-between items-start py-8 px-6 md:px-20">
+      <div className="bg-transparent w-full md:flex justify-between items-start py-8 px-6 md:px-12">
         
         
         <section className="text-white mb-8 md:mb-0 md:w-1/3">
