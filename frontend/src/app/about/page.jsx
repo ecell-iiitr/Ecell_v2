@@ -1,6 +1,44 @@
+"use client";
 import React from "react";
 import HighlightsFlipCard from "../components/HighlightsFlipCard";
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Timeline from "../components/Timeline";
+const images = [
+  {
+    id: 1,
+    src: "https://picsum.photos/200/300",
+  },
+  {
+    id: 2,
+    src: "https://picsum.photos/200/300",
+  },
+  {
+    id: 3,
+    src: "https://picsum.photos/200/300",
+  },
+  {
+    id: 4,
+    src: "https://picsum.photos/200/300",
+  },
+  {
+    id: 5,
+    src: "https://picsum.photos/200/300",
+  },
+  {
+    id: 6,
+    src: "https://picsum.photos/200/300",
+  },
+  {
+    id: 7,
+    src: "https://picsum.photos/200/300",
+  },
+];
 function page() {
   return (
     <div className="h-full">
@@ -24,12 +62,25 @@ function page() {
           </p>
         </div>
       </main>
-      <section className="w-full">
+      <section className="w-full ">
         <div className="w-full flex items-center justify-center pt-12">
-          <img
-            src="/party.jpeg"
-            className="w-72 h-64 md:w-96 md:h-72 rounded-xl object-cover object-center"
-          />
+          <Carousel className="w-[390px] ">
+            <CarouselContent>
+              {images.map((image) => (
+                <CarouselItem key={image.id}>
+                  <div className="p-1">
+                    <img
+                      src={image.src}
+                      alt="img"
+                      className="w-72 h-64 md:w-full  rounded-xl object-cover object-center "
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
         <h1 className="text-center text-5xl font-bold text-[#BD9F67] pt-7">
           Our Vision
@@ -57,28 +108,8 @@ function page() {
           <HighlightsFlipCard />
         </div>
       </section>
-      <section className="w-full pt-10 px-2">
-        <h1 className="text-center text-4xl font-bold text-[#BD9F67] pt-7 mb-10">
-          TIMELINE
-        </h1>
-        <div className="h-full flex items-center justify-center mb-10 w-full">
-            <div className="flex mx-auto">
-            <div className="mb-36  mt-auto ">
-            <div className=" h-20 w-20 rounded-full bg-[#243137]"></div>
-            <div className="h-6 mt-6  rounded-full w-[300px] bg-[#BD9F67] flex items-center justify-center text-white">
-              2016
-            </div>
-            <div className=" mt-6  rounded-xl w-[300px] border-2 border-[#BD9F67] p-4">
-              <h1 className="text-[#BD9F67]">2016</h1>
-              <p className="text-black font-light text-sm mt-2">Business incubator SINE inaugurated by Mr. Nandan Nilekani, CEO, Infosys and Mr. Kanwal Rekhi, Venture Capitalist and Director, TiE, jump starts with 8 startups incubated already.</p>
-            </div>
-          </div>
-          <div className="h-5 w-[20px] md:w-[300px] rounded-full bg-[#BD9F67] mt-[50px] relative right-[50px]"></div>
-          <div className="h-5  w-[20px] md:w-[300px] rounded-full bg-[#BD9F67] mt-[10px] relative right-[50px]  "></div>
-            </div>
-
-
-        </div>
+      <section className="w-full">
+            <Timeline/>
       </section>
     </div>
   );

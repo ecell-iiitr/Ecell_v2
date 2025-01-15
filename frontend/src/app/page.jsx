@@ -10,7 +10,7 @@ export default function Home() {
     <Herosection/>
     <EcellCard/>
     <Initiativesection/>
-     <SpeakerCarousel/>
+    <SpeakerCarousel/>
     <TestimonialSlider/>
    
   </div>

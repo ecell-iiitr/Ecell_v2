@@ -10,24 +10,24 @@ const Timeline = () => {
   return (
     <div
       id="schedule"
-      className="bg-[#00000080] relative  md:px-12 sm:px-8 px-4 w-[100%] min-h-[100vh]"
+      className=" relative  md:px-12 sm:px-8 px-4 w-[100%] min-h-[100vh]"
     >
-      <h1 className="text-center mb-8 font-[Varela] text-[#8F8EE9] font-bold text-5xl">
+      <h1 className="text-center mb-8 font-[Varela] text-[#BD9F67] font-bold text-5xl pt-10">
         TIMELINE
       </h1>
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#fff" }}
+          className="vertical-timeline-element--work bg-bl"
+          contentStyle={{ background: "rgb(255,255,255,0.9)", color: "#5c5a5a" }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(255,255,255,0.1)" }}
           date="1 Dec - 1 Feb"
           iconStyle={{ background: "rgb(36,36,36,1)", color: "#fff" }}
           icon={<IoIosSchool className="text-slate-100" />}
         >
-          <h1 className=" font-bold text-xl text-[#72F37B]">
+          <h1 className=" font-bold text-xl text-[#daa94f]">
             REGISTRATION BEGINS
           </h1>
-          <p>
+          <p className="text-black">
             Registration opens up for students to register with their respective
             teams and project ideas for Hackathon.
           </p>
@@ -47,32 +47,32 @@ const Timeline = () => {
           </VerticalTimelineElement> */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#fff" }}
+          contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#5c5a5a" }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(255,255,255,0.1)" }}
           date="22 Feb - 23 Feb"
           iconStyle={{ background: "rgb(36,36,36,1)", color: "#fff" }}
           icon={<IoIosSchool className="text-slate-100" />}
         >
-          <h1 className="text-[#72F37B] font-bold text-xl">
+          <h1 className="text-[#daa94f] font-bold text-xl">
             Code Kurukshetra MAIN EVENT
           </h1>
-          <p>
+          <p className="text-black">
             Code Kurukshetra will be a two-day event consisting of various guest
             lectures, workshops, and project evaluation.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#fff" }}
+          contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#5c5a5a" }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(255,255,255,0.1)" }}
           date="23 Feb"
           iconStyle={{ background: "rgb(36,36,36,1)", color: "#fff" }}
           icon={<IoIosSchool className="text-slate-100" />}
         >
-          <h1 className="text-[#72F37B] font-bold text-xl">
+          <h1 className="text-[#daa94f] font-bold text-xl">
             RESULT DECLARATION
           </h1>
-          <p>
+          <p className="text-black">
             The ultimate hacker will be revealed by our Judging Panel on 17th
             April 2023
           </p>
