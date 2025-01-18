@@ -3,7 +3,7 @@ import React from "react";
 
 import person from "../../../public/person.jpg";
 
-const TeamMemberCard = () => {
+const TeamMemberCard = ({ img, name, des }) => {
   return (
     <div
       className="relative h-[180px] w-[250px] bg-[#243137] rounded-[10px]"
@@ -12,16 +12,16 @@ const TeamMemberCard = () => {
       <Image
         className="absolute top-[-50px] left-[75px]  h-[100px] w-[100px] rounded-full object-cover"
         alt="team-member"
-        src={person}
+        src={img}
         width={100}
         height={100}
       />
       <div className="flex flex-col pt-[60px]">
         <p className="font-[600] text-[20px] text-[#BD9F67] font-poppins leading-[30px] text-center px-[15px]">
-          Shubh Shubhanjal
+          {name}
         </p>
         <p className="font-[500] text-[16px] text-[#FFF] font-poppins text-center px-[15px]">
-          Joint Secretary, Joint Marketing Design and Research
+          {des}
         </p>
       </div>
     </div>

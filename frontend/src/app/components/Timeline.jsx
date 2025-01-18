@@ -16,7 +16,7 @@ const Timeline = () => {
         TIMELINE
       </h1>
       <VerticalTimeline>
-        <VerticalTimelineElement
+        {/* <VerticalTimelineElement
           className="vertical-timeline-element--work bg-bl"
           contentStyle={{ background: "rgb(255,255,255,0.9)", color: "#5c5a5a" }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(255,255,255,0.1)" }}
@@ -31,7 +31,7 @@ const Timeline = () => {
             Registration opens up for students to register with their respective
             teams and project ideas for Hackathon.
           </p>
-        </VerticalTimelineElement>
+        </VerticalTimelineElement> */}
         {/* <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#fff" }}
@@ -47,35 +47,33 @@ const Timeline = () => {
           </VerticalTimelineElement> */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#5c5a5a" }}
+          contentStyle={{
+            background: "rgb(255,255,255,0.1)",
+            color: "#5c5a5a",
+          }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(255,255,255,0.1)" }}
-          date="22 Feb - 23 Feb"
+          date="2021"
           iconStyle={{ background: "rgb(36,36,36,1)", color: "#fff" }}
           icon={<IoIosSchool className="text-slate-100" />}
         >
           <h1 className="text-[#daa94f] font-bold text-xl">
-            Code Kurukshetra MAIN EVENT
+            E-Cell, IIIT Ranchi
           </h1>
-          <p className="text-black">
-            Code Kurukshetra will be a two-day event consisting of various guest
-            lectures, workshops, and project evaluation.
-          </p>
+          <p className="text-black">Establishment of E-Cell in IIIT Ranchi.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255,255,255,0.1)", color: "#5c5a5a" }}
+          contentStyle={{
+            background: "rgb(255,255,255,0.1)",
+            color: "#5c5a5a",
+          }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(255,255,255,0.1)" }}
-          date="23 Feb"
+          date="2016"
           iconStyle={{ background: "rgb(36,36,36,1)", color: "#fff" }}
           icon={<IoIosSchool className="text-slate-100" />}
         >
-          <h1 className="text-[#daa94f] font-bold text-xl">
-            RESULT DECLARATION
-          </h1>
-          <p className="text-black">
-            The ultimate hacker will be revealed by our Judging Panel on 17th
-            April 2023
-          </p>
+          <h1 className="text-[#daa94f] font-bold text-xl">IIIT RANCHI</h1>
+          <p className="text-black">Establishment of IIIT Ranchi.</p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
