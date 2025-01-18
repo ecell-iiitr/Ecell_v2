@@ -75,7 +75,7 @@ function page() {
         <h1 className="text-[#BD9F67]  text-center  text-3xl md:text-5xl font-bold pt-20 pb-10">
           MEET OUR TEAM{" "}
         </h1>
-        <div className="flex  flex-wrap-reverse  items-center gap-24 mt-16  justify-center px-5 md:px-10  w-full">
+        <div className="flex  flex-wrap  items-center gap-24 mt-16  justify-center px-5 md:px-10  w-full">
           {team.map((i, index) => (
             <TeamMemberCard
               key={index} // Use a unique identifier if available instead of index
