@@ -2,25 +2,46 @@ import React, { useState } from "react";
 
 const testimonials = [
   {
-    name: "Dharmendra Pradhan",
-    position: "Education Minister of India",
+    name: "Kanchan Chanana ",
+    position: "Corporate Professional",
     image: "./college.png",
     message:
-      "In a country like ours where job creation and entrepreneurship are critical to becoming a developed nation, the role of IIT students and alumni is vital. IIT Bombay has produced some of the most successful entrepreneurs who have gone on to create thousands of jobs. IIT Bombay has been instrumental in fostering a culture of innovation among its students.",
+      "Speaking at this event was an incredible experience. I loved connecting with the audience and sharing insights about navigating the corporate world. Their enthusiasm and curiosity made the session truly memorable. I hope my journey inspires others to embrace challenges and turn them into opportunities for growth.",
   },
   {
-    name: "Ratan Tata",
-    position: "Industrialist & Philanthropist",
+    name: "Mamta Kumari",
+    position: "Co-Founder, Prep Bytes",
     image: "./college.png",
     message:
-      "The IIT system has been a great source of innovation and continues to produce remarkable talent that is shaping industries worldwide.",
+      "t was an absolute pleasure to share my journey as a co-founder of Prep Bytes with such an engaging audience. Witnessing their eagerness to learn and grow reminded me of why I started this venture in the first place. I’m grateful for the opportunity to motivate others to follow their dreams and create meaningful impact.",
   },
   {
-    name: "Sundar Pichai",
-    position: "CEO, Google",
+    name: "Gaurisha R Srivastava",
+    position: "Software Engineer, Microsoft",
     image: "./college.png",
     message:
-      "The focus on solving real-world problems at IIT has created a new generation of leaders who are making a significant impact globally.",
+      "Being part of this event was an enriching experience for me as much as it was for the attendees. Sharing my journey at Microsoft and discussing the value of curiosity, persistence, and lifelong learning felt incredibly rewarding. I hope my story inspired others to embrace their unique paths in technology.",
+  },
+  {
+    name: "Vishal Pratap Singh",
+    position: "Co-Founder, SARG.IO",
+    image: "./college.png",
+    message:
+      "Speaking at this platform gave me an opportunity to reflect on my entrepreneurial journey and share valuable lessons from building SARG.IO. I believe that by fostering adaptability and resilience, anyone can create something impactful. It was truly inspiring to connect with such a motivated group of individuals.",
+  },
+  {
+    name: "Siddharth Shekhar",
+    position: "Co-Founder, SARG.IO",
+    image: "./college.png",
+    message:
+      "It was an honor to share the stage and talk about my experiences co-founding SARG.IO. Interacting with aspiring entrepreneurs and sharing insights on leadership, creativity, and teamwork was incredibly fulfilling. I hope my story encouraged others to pursue their dreams fearlessly and build something meaningful.",
+  },
+  {
+    name: "Bishal Chakraborty",
+    position: "Co-Founder, Growth Traders",
+    image: "./college.png",
+    message:
+      "Participating as a speaker was a phenomenal experience. Sharing my insights into the financial world and my journey with Growth Traders allowed me to connect with individuals eager to learn and grow. I hope my session empowered the audience to take confident steps toward achieving financial independence.",
   },
 ];
 
