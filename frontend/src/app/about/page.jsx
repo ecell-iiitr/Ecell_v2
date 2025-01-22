@@ -3,7 +3,7 @@
 import React from "react";
 import HighlightsFlipCard from "../components/HighlightsFlipCard";
 import Timeline from "../components/Timeline";
-import Carousel from "../components/Crousel"
+import Carousel from "../components/Crousel";
 const images = [
   { id: 1, src: "https://picsum.photos/200/300" },
   { id: 2, src: "/college.png" },
@@ -33,21 +33,29 @@ function AboutPage() {
           <h1 className="text-[#BD9F67] text-center text-3xl md:text-5xl font-extrabold pt-20">
             Origins of E-Cell
           </h1>
-          <p className="text-left py-9 text-white text-sm md:text-md px-10 md:px-32">
-            The Entrepreneurship Cell, at IIT Bombay was founded in 1998 with
-            the motto of ‘Creating Job Creators’. Currently, we are a team of 21
-            managers, 2 overall Coordinators, and many enthusiastic students
-            studying at IITB, sharing a common mission. The team meets up in an
-            18x18x14 room, popularly known as the ‘E-Cell office’ inside the
-            Students Activity Centre (SAC), where the strategy to uplift the
-            flame of startups across the globe originates.
+          <p className="text-center py-9 text-white text-sm md:text-md px-10 md:px-32">
+            The Entrepreneurship Cell at IIIT Ranchi, established in 2021,
+            embodies the vision of fostering innovation and empowering
+            individuals to become job creators rather than job seekers. With a
+            dynamic team of 21 managers, 2 overall coordinators, and numerous
+            enthusiastic students from various disciplines, we share a unified
+            mission to ignite the entrepreneurial spirit within and beyond our
+            campus. Our brainstorming sessions, strategies, and plans to fuel
+            the startup ecosystem originate from a vibrant workspace located in
+            the heart of the campus. This space is not just an office but a hub
+            where ideas are transformed into impactful ventures, symbolizing the
+            driving force behind IIIT Ranchi’s entrepreneurial aspirations.
+            While IIIT Ranchi was established in 2016, the creation of E-Cell in
+            2021 marked a pivotal moment in our journey toward promoting
+            innovation, collaboration, and the development of groundbreaking
+            ideas in the entrepreneurial domain.
           </p>
         </div>
       </main>
 
       <section className="w-full">
         <div className="w-full flex items-center justify-center pt-12 ">
-          <Carousel/>
+          <Carousel />
         </div>
 
         <h1 className="text-center text-5xl font-bold text-[#BD9F67] pt-7">

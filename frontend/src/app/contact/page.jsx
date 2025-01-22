@@ -60,14 +60,21 @@ function page() {
           <h1 className="text-[#BD9F67] text-center  text-3xl md:text-5xl font-extrabold pt-20">
             E-Cell TeaM
           </h1>
-          <p className="text-left py-9 text-white text-sm md:text-md px-10 md:px-32">
-            The Entrepreneurship Cell, at IIT Bombay was founded in 1998 with
-            the motto of ‘Creating Job Creators’. Currently, we are a team of 21
-            managers, 2 overall Coordinators, and many enthusiastic students
-            studying at IITB, sharing a common mission. The team meets up in an
-            18x18x14 room, popularly known as the ‘E-Cell office’ inside the
-            Students Activity Centre (SAC), where the strategy to uplift the
-            flame of startups across the globe originates.{" "}
+          <p className=" py-9 text-white text-sm md:text-md px-10 md:px-32 text-center">
+            The E-Cell at IIIT Ranchi operates with a well-defined
+            organizational structure, ensuring seamless coordination and
+            efficiency in all its endeavors. Our team is divided into various
+            departments, each managed by a dedicated Secretary and Joint
+            Secretary, who collectively oversee different aspects of the Cell's
+            functioning. From corporate relations and networking to creative
+            design, social media marketing, operations, and student
+            coordination, each department plays a critical role in driving our
+            mission. The Secretaries lead their respective verticals with a
+            strategic vision, while the Joint Secretaries work alongside them,
+            ensuring smooth execution and innovation. This collaborative
+            structure not only promotes leadership and teamwork but also enables
+            the E-Cell to effectively nurture entrepreneurial talent and build a
+            thriving startup ecosystem at IIIT Ranchi.
           </p>
         </div>
       </main>
