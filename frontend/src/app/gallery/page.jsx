@@ -31,13 +31,12 @@ const Page = () => {
           E-Cell in Motion
         </h1>
         <p className="text-[#212529] px-[10%] md:px-[17%] text-center py-8">
-          Explore unforgettable moments where aspiring entrepreneurs, industry experts, and innovators come together to share knowledge, inspire ideas, and drive change.
+          Explore unforgettable moments where aspiring entrepreneurs, industry
+          experts, and innovators come together to share knowledge, inspire
+          ideas, and drive change.
         </p>
-        <div className="flex flex-wrap items-center gap-7 justify-center px-5 md:px-10 py-8 w-full">
-          {Array.from({ length: 11 }).map((_, index) => (
-            <Gallerycard key={index} />
-          ))}
-        </div>
+
+        <Gallerycard />
       </main>
 
       {/* Carousel Section */}
@@ -46,7 +45,9 @@ const Page = () => {
           E-Cell in Motion
         </h1>
         <p className="text-[#212529] px-[10%] md:px-[17%] text-center py-8">
-          Explore unforgettable moments where aspiring entrepreneurs, industry experts, and innovators come together to share knowledge, inspire ideas, and drive change.
+          Explore unforgettable moments where aspiring entrepreneurs, industry
+          experts, and innovators come together to share knowledge, inspire
+          ideas, and drive change.
         </p>
         <div className="flex items-center justify-center py-10 w-full">
           <div className="w-[80%] md:w-[70%] lg:w-[60%] h-[400px] overflow-hidden rounded-lg">
