@@ -6,30 +6,40 @@ import InspirationalSpeakerCard from "./InspirationalSpeakerCard";
 const SPEAKERS = [
   {
     id: 1,
-    name: "John Doe",
-    title: "Motivational Speaker",
-    image: "./college.png",
+    name: "Vishal Pratap Singh",
+    title: "Co-founder, Sarg",
+    image: "/gallery/pratapsingh.png",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    title: "Leadership Expert",
-    image: "./college.png",
+    name: "Siddharth Shekhar",
+    title: "Founder, Sarg",
+    image: "/gallery/siddharth.png",
   },
-  { id: 3, name: "Sam Wilson", title: "Business Guru", image: "./college.png" },
+  {
+    id: 3,
+    name: "Bishal Chakroborty",
+    title: "Founder, Growth Traders",
+    image: "/gallery/Bishal.png",
+  },
   {
     id: 4,
-    name: "Mary Johnson",
-    title: "Innovation Speaker",
-    image: "./college.png",
+    name: "Kanchan Chanana",
+    title: "Corporate Professional",
+    image: "/gallery/kanchan.png",
   },
   {
     id: 5,
-    name: "Alex Turner",
-    title: "Tech Innovator",
-    image: "./college.png",
+    name: "Mamta Kumari",
+    title: "Co-founder, PrepBytes",
+    image: "/gallery/MamtaKumari.png",
   },
-  { id: 6, name: "Emma Stone", title: "Entrepreneur", image: "./college.png" },
+  {
+    id: 6,
+    name: "Gaurisha R Srivastava",
+    title: "SWE, Microsoft",
+    image: "/gallery/gaurisha.png",
+  },
 ];
 
 const RESPONSIVE_BREAKPOINTS = {
@@ -81,7 +91,13 @@ function Speaker({ speaker }) {
 function SpeakerCarousel() {
   return (
     <div className=" px-10 py-16 md:p-16 lg:p-20">
-      <div className="text-[#BD9F67] font-bold text-3xl text-center mb-24">
+      <div
+        className="text-[#BD9F67] font-[400] text-center mb-24 text-3xl md:text-6xl"
+        style={{
+          fontFamily: "var(--font-bebas-neue), sans-serif",
+          color: "#BD9F67",
+        }}
+      >
         Inspirational Speakers
       </div>
       <div className="mt-10">

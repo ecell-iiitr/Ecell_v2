@@ -57,10 +57,16 @@ function page() {
           className="absolute top-0 left-0 h-full w-full object-cover"
         />
         <div className="absolute z-10 bg-black/75 top-0 left-0 h-full w-full pt-10">
-          <h1 className="text-[#BD9F67] text-center  text-3xl md:text-5xl font-extrabold pt-20">
+          <h1
+            className="text-[#BD9F67] text-center  text-3xl md:text-6xl font-[400] pt-20"
+            style={{
+              fontFamily: "var(--font-bebas-neue), sans-serif",
+              color: "#BD9F67",
+            }}
+          >
             E-Cell TeaM
           </h1>
-          <p className=" py-9 text-white text-sm md:text-md px-10 md:px-32 text-center">
+          <p className=" py-9 text-white text-sm md:text-md px-10 md:px-32 text-center font-poppins">
             The E-Cell at IIIT Ranchi operates with a well-defined
             organizational structure, ensuring seamless coordination and
             efficiency in all its endeavors. Our team is divided into various
@@ -79,7 +85,13 @@ function page() {
         </div>
       </main>
       <section className="w-full mt-10 md:mt-16 px-10">
-        <h1 className="text-[#BD9F67]  text-center  text-3xl md:text-5xl font-bold pt-20 pb-10">
+        <h1
+          className="text-[#BD9F67]  text-center  text-3xl md:text-6xl font-[400] pt-20 pb-10"
+          style={{
+            fontFamily: "var(--font-bebas-neue), sans-serif",
+            color: "#BD9F67",
+          }}
+        >
           MEET OUR TEAM{" "}
         </h1>
         <div className="flex  flex-wrap  items-center gap-24 mt-16  justify-center px-5 md:px-10  w-full">

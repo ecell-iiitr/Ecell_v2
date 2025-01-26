@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import college from "../../../public/college.png";
 
-const HighlightsFlipCard = () => {
+const HighlightsFlipCard = ({ img, title, para }) => {
   return (
     <div className="relative w-[300px] h-[260px] group perspective cursor-pointer">
       {/* Card Container */}
@@ -17,12 +17,12 @@ const HighlightsFlipCard = () => {
         >
           <div className="h-[60px] w-[300px] p-[10px] flex items-center justify-center bg-[#243137]">
             <p className="text-center font-[400] text-[#BD9F67] text-[14px] font-poppins">
-              We are on Forbes
+              {title}
             </p>
           </div>
           <Image
-            src={college}
-            className="h-[200px] w-[300px] object-cover"
+            src={img}
+            className="h-[200px] w-[300px]"
             alt="college-1"
             width={300}
             height={200}
@@ -40,23 +40,20 @@ const HighlightsFlipCard = () => {
         >
           <div className="h-[60px] w-[300px] p-[10px] flex items-center justify-center bg-[#243137]">
             <p className="text-center font-[400] text-[#BD9F67] text-[14px] font-poppins">
-              We are on Forbes
+              {title}
             </p>
           </div>
           <div className="h-[200px] w-[300px] relative">
             <Image
-              src={college}
-              className="h-[200px] w-[300px] object-cover"
+              src={img}
+              className="h-[200px] w-[300px]"
               alt="college-2"
               width={300}
               height={200}
             />
             <div className="absolute inset-0 bg-[#00000099] z-1"></div>
             <p className="absolute inset-0 flex items-center justify-center text-center font-[400] text-[11px] text-[#BD9F67] font-poppins p-[16px] z-10">
-              We are on Forbes Entrepreneurs have a clear vision. These are the
-              thinkers, innovators, the action takers who change society for a
-              better by giving them exposure, mentorship, network, funding
-              opportunities and wisdom to turn their dreams into reality.
+              {para}
             </p>
           </div>
         </div>

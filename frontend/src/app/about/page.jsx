@@ -14,6 +14,14 @@ const images = [
   { id: 7, src: "https://picsum.photos/200/300" },
 ];
 
+const highlightData = [
+  {
+    img: "/gallery/g41.jpg",
+    title: "Collabration with BIT Mesra",
+    para: "The collaboration with BIT Mesra aims to foster innovation, research, and skill development through joint initiatives, benefiting students and faculty alike.",
+  },
+];
+
 function AboutPage() {
   const responsive = {
     superLargeDesktop: {
@@ -30,10 +38,16 @@ function AboutPage() {
           className="absolute top-0 left-0 h-full w-full object-cover"
         />
         <div className="absolute z-10 bg-black/75 top-0 left-0 h-full w-full pt-10">
-          <h1 className="text-[#BD9F67] text-center text-3xl md:text-5xl font-extrabold pt-20">
+          <h1
+            className="text-[#BD9F67] text-center text-3xl md:text-6xl pt-20 font-[400]"
+            style={{
+              fontFamily: "var(--font-bebas-neue), sans-serif",
+              color: "#BD9F67",
+            }}
+          >
             Origins of E-Cell
           </h1>
-          <p className="text-center py-9 text-white text-sm md:text-md px-10 md:px-32">
+          <p className="text-center py-9 text-white text-sm md:text-md px-10 md:px-32 font-poppins">
             The Entrepreneurship Cell at IIIT Ranchi, established in 2021,
             embodies the vision of fostering innovation and empowering
             individuals to become job creators rather than job seekers. With a
@@ -58,7 +72,13 @@ function AboutPage() {
           <Carousel />
         </div>
 
-        <h1 className="text-center text-5xl font-bold text-[#BD9F67] pt-7">
+        <h1
+          className="text-center text-6xl font-[400] text-[#BD9F67] pt-7"
+          style={{
+            fontFamily: "var(--font-bebas-neue), sans-serif",
+            color: "#BD9F67",
+          }}
+        >
           Our Vision
         </h1>
         <p className="text-center text-sm md:text-md text-[#212529] px-[10%] py-6">
@@ -72,16 +92,19 @@ function AboutPage() {
       </section>
 
       <section className="w-full pt-10">
-        <h1 className="text-center text-4xl font-bold text-[#BD9F67] pt-7">
+        <h1
+          className="text-center text-6xl font-[400] text-[#BD9F67] pt-7"
+          style={{
+            fontFamily: "var(--font-bebas-neue), sans-serif",
+            color: "#BD9F67",
+          }}
+        >
           HIGHLIGHTS
         </h1>
         <div className="flex flex-wrap items-center gap-7 justify-center px-5 md:px-10 py-8 w-full">
-          <HighlightsFlipCard />
-          <HighlightsFlipCard />
-          <HighlightsFlipCard />
-          <HighlightsFlipCard />
-          <HighlightsFlipCard />
-          <HighlightsFlipCard />
+          {highlightData.map((d) => (
+            <HighlightsFlipCard img={d.img} title={d.title} para={d.para} />
+          ))}
         </div>
       </section>
 

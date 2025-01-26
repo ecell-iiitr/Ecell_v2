@@ -12,7 +12,13 @@ const Timeline = () => {
       id="schedule"
       className=" relative  md:px-12 sm:px-8 px-4 w-[100%] min-h-[100vh]"
     >
-      <h1 className="text-center mb-8 font-[Varela] text-[#BD9F67] font-bold text-5xl pt-10">
+      <h1
+        className="text-center mb-8 font-[Varela] text-[#BD9F67] font-[400] text-6xl pt-10"
+        style={{
+          fontFamily: "var(--font-bebas-neue), sans-serif",
+          color: "#BD9F67",
+        }}
+      >
         TIMELINE
       </h1>
       <VerticalTimeline>

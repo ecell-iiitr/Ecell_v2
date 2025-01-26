@@ -3,10 +3,16 @@ import React from "react";
 function Initiativesection() {
   return (
     <div className="px-10 md:px-20 py-16 md:py-24">
-      <h1 className="text-3xl text-center font-bold text-[#BD9F67]">
+      <h1
+        className="text-3xl text-center md:text-6xl font-[400] text-[#BD9F67]"
+        style={{
+          fontFamily: "var(--font-bebas-neue), sans-serif",
+          color: "#BD9F67",
+        }}
+      >
         Our Initiatives
       </h1>
-      <p className="mt-10 px-16 text-sm md:text-md  lg:text-lg text-center">
+      <p className="mt-10 px-16 text-sm md:text-md  lg:text-lg text-center font-poppins">
         We at E-Cell, IIIT Ranchi believe that entrepreneurship is the key to
         India’s development. To fulfill this vision, we have conceptualized &
         successfully implemented various initiatives to help students, young
