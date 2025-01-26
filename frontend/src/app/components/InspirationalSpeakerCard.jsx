@@ -3,7 +3,7 @@ import React from "react";
 
 import person from "../../../public/person.jpg";
 
-const InspirationalSpeakerCard = () => {
+const InspirationalSpeakerCard = ({ speaker }) => {
   return (
     <div className="relative w-[200px] h-[230px] group overflow-hidden cursor-pointer">
       {/* Initially Visible Card */}
@@ -13,14 +13,14 @@ const InspirationalSpeakerCard = () => {
           height={99}
           width={99}
           alt="speaker"
-          src={person}
+          src={speaker.image}
         />
         <div className="flex flex-col gap-[6.5px] pt-[19.7px]">
           <p className="font-[600] text-[15px] text-[#BD9F67] font-poppins text-center leading-[15px]">
-            Vishal Pratap Singh
+            {speaker.name}
           </p>
           <p className="font-[500] text-[14px] text-[#FFF] font-poppins text-center leading-[14px]">
-            Co-founder, Sarg
+            {speaker.title}
           </p>
         </div>
       </div>
@@ -32,15 +32,15 @@ const InspirationalSpeakerCard = () => {
           height={230}
           width={200}
           alt="speaker"
-          src={person}
+          src={speaker.image}
         />
         <div className="absolute inset-0 bg-black/50 rounded-[10px]"></div>
         <div className="flex flex-col gap-[6.5px] relative">
           <p className="font-[600] text-[15px] text-[#BD9F67] font-poppins text-center leading-[15px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 ease-in-out">
-            Vishal Pratap Singh
+            {speaker.name}
           </p>
           <p className="font-[500] text-[14px] text-[#FFF] font-poppins text-center leading-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 ease-in-out">
-            Co-founder, Sarg
+            {speaker.title}
           </p>
         </div>
       </div>
