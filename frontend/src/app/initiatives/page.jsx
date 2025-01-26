@@ -21,7 +21,7 @@ function page() {
           >
             OUR INITIATIVES
           </h1>
-          <p className="text-left py-9 text-white text-sm md:text-md px-10 md:px-32 font-poppins text-center">
+          <p className="py-9 text-white text-sm md:text-md px-10 md:px-32 font-poppins text-center">
             Through our diverse range of initiatives, we aim to inspire and
             empower the next generation of entrepreneurs. From hands-on
             workshops and business plan competitions to mentorship programs and
