@@ -8,15 +8,18 @@ import { EffectCards } from "swiper/modules";
 
 const Carousel = () => {
   const images = [
-    "https://picsum.photos/400/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/400/500",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/400/500",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/400/500",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/400/500",
+    "/gallery/g8.jpg",
+    "/gallery/g2.jpg",
+    "/gallery/g1.jpg",
+    "/gallery/g19.png",
+    "/gallery/g20.png",
+    "/gallery/g21.png",
+    "/gallery/g22.png",
+    "/gallery/g25.png",
+    "/gallery/g26.png",
+    "/gallery/g33.png",
+    "/gallery/g38.png",
+    "/gallery/g39.png",
   ];
 
   return (
