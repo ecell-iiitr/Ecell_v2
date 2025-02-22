@@ -1,6 +1,3 @@
-Here's your updated **README.md** with the **Security** and **Authentication** sections removed:  
-
-```md
 # 🚀 E-Cell IIIT Ranchi Website
 
 A dynamic and modern website for the **Entrepreneurship Cell of IIIT Ranchi**, built with **Next.js** and **Express.js**.
