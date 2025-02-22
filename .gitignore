@@ -1,0 +1,10 @@
+# Backend
+backend/server/node_modules
+backend/server/.env
+backend/server/uploads/*
+!backend/server/uploads/.gitkeep
+
+# Frontend
+frontend/node_modules
+frontend/.env.local
+frontend/.next 

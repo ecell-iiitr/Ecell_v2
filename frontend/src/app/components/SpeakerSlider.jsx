@@ -1,46 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import InspirationalSpeakerCard from "./InspirationalSpeakerCard";
-
-const SPEAKERS = [
-  {
-    id: 1,
-    name: "Vishal Pratap Singh",
-    title: "Co-founder, Sarg",
-    image: "/gallery/pratapsingh.png",
-  },
-  {
-    id: 2,
-    name: "Siddharth Shekhar",
-    title: "Founder, Sarg",
-    image: "/gallery/siddharth.png",
-  },
-  {
-    id: 3,
-    name: "Bishal Chakroborty",
-    title: "Founder, Growth Traders",
-    image: "/gallery/Bishal.png",
-  },
-  {
-    id: 4,
-    name: "Kanchan Chanana",
-    title: "Corporate Professional",
-    image: "/gallery/kanchan.png",
-  },
-  {
-    id: 5,
-    name: "Mamta Kumari",
-    title: "Co-founder, PrepBytes",
-    image: "/gallery/MamtaKumari.png",
-  },
-  {
-    id: 6,
-    name: "Gaurisha R Srivastava",
-    title: "SWE, Microsoft",
-    image: "/gallery/gaurisha.png",
-  },
-];
 
 const RESPONSIVE_BREAKPOINTS = {
   superLargeDesktop: {
@@ -88,7 +49,30 @@ function Speaker({ speaker }) {
   );
 }
 
-function SpeakerCarousel() {
+const SpeakerCarousel = () => {
+  const [speakers, setSpeakers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchSpeakers = async () => {
+      try {
+        const response = await fetch('/api/speakers');
+        const data = await response.json();
+        setSpeakers(data);
+      } catch (error) {
+        console.error('Error fetching speakers:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSpeakers();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className=" px-10 py-16 md:p-16 lg:p-20">
       <div
@@ -105,13 +89,13 @@ function SpeakerCarousel() {
           responsive={RESPONSIVE_BREAKPOINTS}
           className="flex items-center"
         >
-          {SPEAKERS.map((speaker) => (
-            <InspirationalSpeakerCard key={speaker.id} speaker={speaker} />
+          {speakers.map((speaker) => (
+            <InspirationalSpeakerCard key={speaker._id} speaker={speaker} />
           ))}
         </Carousel>
       </div>
     </div>
   );
-}
+};
 
 export default SpeakerCarousel;
