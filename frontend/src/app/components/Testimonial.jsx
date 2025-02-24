@@ -1,52 +1,34 @@
-import React, { useState } from "react";
-
-const testimonials = [
-  {
-    name: "Kanchan Chanana ",
-    position: "Corporate Professional",
-    image: "/gallery/kanchan.png",
-    message:
-      "Speaking at this event was an incredible experience. I loved connecting with the audience and sharing insights about navigating the corporate world. Their enthusiasm and curiosity made the session truly memorable. I hope my journey inspires others to embrace challenges and turn them into opportunities for growth.",
-  },
-  {
-    name: "Mamta Kumari",
-    position: "Co-Founder, Prep Bytes",
-    image: "/gallery/MamtaKumari.png",
-    message:
-      "t was an absolute pleasure to share my journey as a co-founder of Prep Bytes with such an engaging audience. Witnessing their eagerness to learn and grow reminded me of why I started this venture in the first place. I’m grateful for the opportunity to motivate others to follow their dreams and create meaningful impact.",
-  },
-  {
-    name: "Gaurisha R Srivastava",
-    position: "Software Engineer, Microsoft",
-    image: "/gallery/gaurisha.png",
-    message:
-      "Being part of this event was an enriching experience for me as much as it was for the attendees. Sharing my journey at Microsoft and discussing the value of curiosity, persistence, and lifelong learning felt incredibly rewarding. I hope my story inspired others to embrace their unique paths in technology.",
-  },
-  {
-    name: "Vishal Pratap Singh",
-    position: "Co-Founder, SARG.IO",
-    image: "/gallery/pratapsingh.png",
-    message:
-      "Speaking at this platform gave me an opportunity to reflect on my entrepreneurial journey and share valuable lessons from building SARG.IO. I believe that by fostering adaptability and resilience, anyone can create something impactful. It was truly inspiring to connect with such a motivated group of individuals.",
-  },
-  {
-    name: "Siddharth Shekhar",
-    position: "Founder, SARG.IO",
-    image: "/gallery/siddharth.png",
-    message:
-      "It was an honor to share the stage and talk about my experiences co-founding SARG.IO. Interacting with aspiring entrepreneurs and sharing insights on leadership, creativity, and teamwork was incredibly fulfilling. I hope my story encouraged others to pursue their dreams fearlessly and build something meaningful.",
-  },
-  {
-    name: "Bishal Chakraborty",
-    position: "Co-Founder, Growth Traders",
-    image: "/gallery/Bishal.png",
-    message:
-      "Participating as a speaker was a phenomenal experience. Sharing my insights into the financial world and my journey with Growth Traders allowed me to connect with individuals eager to learn and grow. I hope my session empowered the audience to take confident steps toward achieving financial independence.",
-  },
-];
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { fetchData } from "@/lib/api";
+import LoadingState from "@/components/ui/LoadingState";
 
 const TestimonialSlider = () => {
+  const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const data = await fetchData('testimonials');
+        setTestimonials(data);
+      } catch (error) {
+        setError(error.message);
+        console.error('Error fetching testimonials:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  if (loading) return <LoadingState />;
+  if (error) return <div>Error: {error}</div>;
+  if (!testimonials.length) return <div>No testimonials available</div>;
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -60,54 +42,39 @@ const TestimonialSlider = () => {
     );
   };
 
-  return (
-    <div className="py-10 px-10 flex-col items-center justify-center">
-      <h2
-        className="text-center text-3xl md:text-6xl font-[400] text-[#BD9F67] mb-16"
-        style={{
-          fontFamily: "var(--font-bebas-neue), sans-serif",
-          color: "#BD9F67",
-        }}
-      >
-        TESTIMONIALS
-      </h2>
-      <div className="max-w-3xl mx-auto p-8 bg-[#243137] rounded-lg shadow-md relative text-white">
-        <div className="relative overflow-hidden">
-          <div
-            className="transition-transform duration-500 ease-in-out flex"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="w-full flex-shrink-0 p-8 text-center">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-24 h-24 rounded-full mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold text-[#BD9F67]">
-                  {testimonial.name}
-                </h3>
-                <p className="text-sm text-[#BD9F67] mb-4">
-                  {testimonial.position}
-                </p>
-                <p>{testimonial.message}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+  const currentTestimonial = testimonials[currentIndex];
 
-        <button
-          onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#BD9F67] text-[#243137] p-3 rounded-full shadow-md hover:bg-[#243137] hover:text-[#BD9F67] transition-all"
-        >
-          ❮
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#BD9F67] text-[#243137] p-3 rounded-full shadow-md hover:bg-[#243137] hover:text-[#BD9F67] transition-all"
-        >
-          ❯
-        </button>
+  return (
+    <div className="max-w-[800px] w-full h-[464px] bg-[#243137] rounded-[50px] flex flex-col items-center gap-[17px] py-[50px]">
+      <div className="flex flex-col gap-[9px] items-center justify-center">
+        <Image
+          src={currentTestimonial.imageUrl}
+          alt={currentTestimonial.name}
+          className="w-[100px] h-[100px] object-cover rounded-full"
+          width={100}
+          height={100}
+        />
+        <div className="flex flex-col">
+          <p className="font-poppins font-[600] text-[25px] leading-[30px] text-[#BD9F67] text-center">
+            {currentTestimonial.name}
+          </p>
+          <p className="font-poppins font-[400] text-[16px] leading-[24px] text-[#BD9F67] text-center">
+            {currentTestimonial.position}
+          </p>
+        </div>
+      </div>
+      <p className="font-poppins font-[400] text-[16px] leading-[24px] text-[#FFF] text-center w-[77%]">
+        <span className="font-poppins font-[700] text-[30px] text-[#BD9F67] leading-[16px] px-1">
+          "
+        </span>
+        {currentTestimonial.message}
+        <span className="font-poppins font-[700] text-[30px] text-[#BD9F67] leading-[16px] px-1">
+          "
+        </span>
+      </p>
+      <div className="flex gap-4 mt-4">
+        <button onClick={handlePrev} className="text-[#BD9F67]">Previous</button>
+        <button onClick={handleNext} className="text-[#BD9F67]">Next</button>
       </div>
     </div>
   );

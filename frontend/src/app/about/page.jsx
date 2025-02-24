@@ -103,7 +103,7 @@ function AboutPage() {
         </h1>
         <div className="flex flex-wrap items-center gap-7 justify-center px-5 md:px-10 py-8 w-full">
           {highlightData.map((d) => (
-            <HighlightsFlipCard img={d.img} title={d.title} para={d.para} />
+            <HighlightsFlipCard key={d} img={d.img} title={d.title} para={d.para} />
           ))}
         </div>
       </section>
